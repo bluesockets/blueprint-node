@@ -1,0 +1,51 @@
+{
+  "test": {
+    "syncModels": true,
+    "jwt" : {
+      "authenticate": true,
+      "jwtSecret": "supersecret",
+      "jwtOptions" :  {
+        "algorithm":  "HS256",
+        "noTimestamp": true
+      }
+    },
+    "postgres": {
+      "connectionString" : "postgres://user:password@localhost:5432/test",
+      "configuration": {
+        "max": 5,
+        "min": 0,
+        "idle": 10000
+      }
+    },
+    "elasticsearch": {
+      "apiVersion": "2.1",
+      "host": "localhost:9200",
+      "log": "info"
+    }
+  },
+  "jasmine": {
+    "syncModels": true,
+    "jwt" : {
+      "authenticate": true,
+      "jwtSecret": "supersecret",
+      "jwtOptions" :  {
+        "algorithm":  "HS256",
+        "noTimestamp": true
+      }
+    },
+    "postgres": {
+      "connectionString" : "postgres://user:password@192.168.99.100:5432/test",
+      "configuration": {
+        "max": 5,
+        "min": 0,
+        "idle": 10000,
+        "logging": false
+      }
+    },
+    "elasticsearch": {
+      "apiVersion": "2.1",
+      "host": "192.168.99.100:8200",
+      "log": "info"
+    }
+  }
+}

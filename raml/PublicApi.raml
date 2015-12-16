@@ -1,0 +1,119 @@
+#%RAML 1.0
+title: Blueprint API
+version: v1.0.0
+baseUri: https://dev-api.efl.io
+mediaType: application/json
+documentation:
+    title: Public API notes
+    content: This API is meant for any publicly accessible endpoints such as User registration
+
+/public/register:
+  description: This endpoint is used to register new users
+  post:
+    queryParameters:
+      email:
+        description: the email used by the guest to register a new user
+        type: string
+        required: true
+        example: 'someone@somewhere.com'
+      first_name:
+        description: user's first name
+        type: string
+        required: false
+        example: 'John'
+      last_name:
+        description: user's last name
+        type: string
+        required: false
+        example: 'Smith'
+      password:
+        description: user's password
+        type: string
+        required: false
+        example: '123123'
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "status": 200,
+                 "user":{
+                    "id":1,
+                    "email":"bluesockets@gmail.com",
+                    "firstName":"Antonio",
+                    "lastName":"gonzalez",
+                    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImJsdWVzb2NrZXRzQGdtYWlsLmNvbSJ9.OLR2mKZiH1KBJq1nEpbVjr3_mZCK-EsvFz41y7wjURs"
+                 }
+              }
+
+/public/login:
+  description: This endpoint is used to login users
+  post:
+    queryParameters:
+      email:
+        description: user's email
+        type: string
+        required: true
+        example: 'babyduck@somewhere.com'
+      password:
+        description: user's password
+        type: string
+        required: true
+        example: '123123'
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "status": 200,
+                 "user":{
+                    "id":41,
+                    "email":"someone@gmail.com",
+                    "firstName":"Antonio",
+                    "lastName":"gonzalez",
+                    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e30.WhnOCbIEanUnLubrwqA7nsrht1GBVDeulwSrFZ0-SYk"
+                 }
+              }
+
+/public/facebook:
+  description: This endpoint is used to login and register users with facebook
+  post:
+    queryParameters:
+      fb_image_url:
+        description: user's password
+        type: string
+        required: false
+        example: 'http://www.something.com/images.jpg'
+      email:
+        description: the email used by the guest to register a new user
+        type: string
+        required: true
+        example: 'someone@somewhere.com'
+      first_name:
+        description: user's first name
+        type: string
+        required: false
+        example: 'John'
+      last_name:
+        description: user's last name
+        type: string
+        required: false
+        example: 'Smith'
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "status": 200,
+                 "user":{
+                    "id":41,
+                    "email":"bluesockets@gmail.com",
+                    "firstName":"Antonio",
+                    "lastName":"gonzalez",
+                    "fbImageUrl":"http://www.something.com/images.jpg",
+                    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e30.WhnOCbIEanUnLubrwqA7nsrht1GBVDeulwSrFZ0-SYk"
+                 }
+              }

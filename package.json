@@ -1,0 +1,24 @@
+{
+  "name": "blueprint-node",
+  "version": "0.0.1",
+  "description": "the blueprint-node API application",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "dependencies": {
+    "async": "~1.5.0",
+    "elasticsearch": "~9.0.0",
+    "jsonwebtoken": "~5.4.1",
+    "moment": "^2.10.6",
+    "password-hash": "~1.2.2",
+    "pg": "~4.4.3",
+    "pg-hstore": "~2.3.2",
+    "restify": "~4.0.3",
+    "sequelize": "~3.13.0"
+  },
+  "devDependencies": {
+    "frisby": "~0.8.5"
+  }
+}
