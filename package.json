@@ -8,17 +8,24 @@
   },
   "author": "",
   "dependencies": {
-    "async": "~1.5.0",
-    "elasticsearch": "~9.0.0",
     "jsonwebtoken": "~5.4.1",
     "moment": "^2.10.6",
     "password-hash": "~1.2.2",
-    "pg": "~4.4.3",
-    "pg-hstore": "~2.3.2",
-    "restify": "~4.0.3",
-    "sequelize": "~3.13.0"
+    "pg": "6.1.0",
+    "pg-hstore": "2.3.2",
+    "restify": "6.0.0",
+    "restify-cookies": "^0.2.0",
+    "restify-plugins": "1.6.0",
+    "sequelize": "^4.38.0",
   },
   "devDependencies": {
-    "frisby": "~0.8.5"
+    "babel-eslint": "^8.2.6",
+    "eslint": "4.12.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-react": "7.5.1"
   }
 }
