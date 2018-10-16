@@ -16,7 +16,7 @@
     "restify": "6.0.0",
     "restify-cookies": "^0.2.0",
     "restify-plugins": "1.6.0",
-    "sequelize": "^4.38.0",
+    "sequelize": "^4.38.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
